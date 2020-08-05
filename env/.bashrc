@@ -113,10 +113,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-
-
-
-if [ -f ~/.env ]; then
-    . ~/.env
-fi
