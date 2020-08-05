@@ -11,4 +11,11 @@ if [ -f ~/.env ]; then
 fi
 EOF
 
-. ~/.bashrc
+
+
+if [ ! -f ~/.profile ]; then
+    wget https://raw.githubusercontent.com/AsinRay/q/master/env/.profile -O ~/.profile
+    . ~/.profile
+fi
+
+
