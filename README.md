@@ -9,5 +9,5 @@
 ## 执行脚本
 
 ```sh
-curl https://raw.githubusercontent.com/AsinRay/q/master/env/q.sh | bash
+curl https://raw.githubusercontent.com/AsinRay/q/master/q.sh | bash
 ```
