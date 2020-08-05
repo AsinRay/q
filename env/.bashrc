@@ -114,4 +114,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-. ~/.env
+
+
+
+if [ -f ~/.env ]; then
+    . ~/.env
+fi
