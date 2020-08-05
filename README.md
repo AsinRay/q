@@ -4,4 +4,10 @@
 
 ## download path
 
-> f.gif => https://raw.githubusercontent.com/AsinRay/q/master/env/f.gif
+> 取文件: https://raw.githubusercontent.com/AsinRay/q/master/env/f.gif
+
+## 执行脚本
+
+```sh
+curl https://raw.githubusercontent.com/AsinRay/q/master/env/q.sh | bash
+```
