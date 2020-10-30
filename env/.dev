@@ -1,0 +1,25 @@
+## Edited by Asin Liu
+## Email: codezone@163.com
+
+# java  maven gradle path
+
+export JAVA_HOME=/usr/java/jdk11
+
+PATH=$JAVA_HOME/bin/:$PATH
+PATH=~/.dev/mvn/bin/:$PATH
+PATH=~/.dev/gradle/bin/:$PATH
+
+# node path
+PATH=$PATH:~/.dev/node/bin/
+
+# go path
+
+PATH="$PATH:$HOME/.dev/go/bin"
+
+# cargo path
+PATH="$PATH:$HOME/.cargo/bin"
+
+export PATH
+
+export SSLKEYLOGFILE=$PATH:~/.dev/node/bin
+
