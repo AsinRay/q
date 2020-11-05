@@ -1,5 +1,5 @@
 # check if has folder ~/.dev
-tgt=~/.dex
+tgt=~/.dev
 echo $tgt
 if [ ! -d $tgt ]; then
     mkdir -p $tgt
@@ -48,6 +48,12 @@ case $response in [yY][eE][sS]|[yY]|[jJ]|'')
     echo flutter will be installed.
     installFlutter
     echo dev tools installed.
+    path=$tgt/.env/dev.path
+    `cat>>$q<<EOF
+    
+    if [ -f $path ]; then
+        . $path
+    fi`
     ;;
     *)
     echo
@@ -55,7 +61,3 @@ case $response in [yY][eE][sS]|[yY]|[jJ]|'')
     echo
     ;;
 esac
-
-
-
-
