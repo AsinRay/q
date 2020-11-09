@@ -12,18 +12,20 @@ cp -r .env $tgt
 # source $tgt/.env/.q
 
 q=$tgt/.env/.q
-echo "写入文件shell脚本文件"
+echo "chain .bashrc"
 cat>>~/.bashrc<<EOF
 if [ -f $q ]; then
     . $q
 fi
 EOF
 
+
+
 flt='flutter'
 wflt=`which $flt`
 # install flutter dev tools
 installFlutter(){
-    echo 'asdfasdfasdfasdf'
+    echo 'install fltter dev tools'
     # test is the flutter is already installed.
     if [ ! -z "$wflt" ]; then
         echo "Flutter has already installed."
@@ -37,6 +39,24 @@ installFlutter(){
     fi    
 }
 
+setupFlutter(){
+    echo 'flutter settings is running...'
+    # Chain the dev.path to .q
+    path=$tgt/.env/dev.path
+    cat>>$q<<EOF
+    if [ -f $path ]; then
+        . $path
+    fi
+EOF
+    # modify the dev.path, set the alias for flutter. 
+    cat>>$path<<EOF
+    alias f='flutter'
+    alias fr='flutter run'
+EOF
+
+}
+
+
 # 让用户决定是否设置当前的环境为开发者环境
 # 如果用户选择使用dev模式，则生成dev install 命令，使用此命令可以安装常用的开发工具
 # 每安装完成一个开发工具，设置PATH到.dev文件的内容
@@ -46,14 +66,10 @@ read -p "是否安装开发工具集? [Y/n] " response
 case $response in [yY][eE][sS]|[yY]|[jJ]|'') 
     echo
     echo flutter will be installed.
-    installFlutter
+    #installFlutter
     echo dev tools installed.
-    path=$tgt/.env/dev.path
-    `cat>>$q<<EOF
-    
-    if [ -f $path ]; then
-        . $path
-    fi`
+    setupFlutter
+    echo flutter settings ok
     ;;
     *)
     echo
