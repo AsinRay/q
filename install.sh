@@ -52,6 +52,8 @@ EOF
     cat>>$path<<EOF
     alias f='flutter'
     alias fr='flutter run'
+    # For jdk9 and jdk10 
+    #export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 EOF
 
 }

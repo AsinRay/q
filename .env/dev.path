@@ -4,9 +4,8 @@
 # java  maven gradle path
 
 # export JAVA_HOME=/usr/java/jdk11
-export JAVA_HOME=~/.dev/jdk11
-
-PATH=$JAVA_HOME/bin/:$PATH
+# export JAVA_HOME=~/.dev/jdk11
+# PATH=$JAVA_HOME/bin/:$PATH
 PATH=~/.dev/mvn/bin/:$PATH
 PATH=~/.dev/gradle/bin/:$PATH
 

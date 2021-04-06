@@ -20,23 +20,12 @@ fi
 # some more ls aliases
 alias ll='ls -l'
 alias la='ls -A'
-alias lla='ls -Al'
-alias l='ls -CF'
-alias lh='ls -lh'
-alias tf='tail -100f'
 
-# same more ls aliases
-alias dpa='docker ps -a'
-alias di='docker images'
-alias dia='docker images -a'
-alias dri='docker rmi'
-alias dr='docker rm'
-alias d='docker '
-alias dbt='docker build -t '
-alias drr='docker run --rm  '
-alias ssi='ssh -o ServerAliveInterval=60 -i'
 
-alias tf='tail -100f '
+# export path
+#export http_proxy=http://127.0.0.1:8123
+#export https_proxy=http://127.0.0.1:8123
+
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -46,8 +35,4 @@ alias tf='tail -100f '
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliased
 fi
-
-# export path
-#export http_proxy=http://127.0.0.1:8123
-#export https_proxy=http://127.0.0.1:8123
 
