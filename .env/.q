@@ -1,4 +1,4 @@
-## Edited by Asin Liu
+# Edited by Asin Liu
 ## Email: codezone@163.com
 
 
@@ -15,16 +15,21 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -l'
 alias la='ls -A'
+alias lla='ls -Al'
+alias l='ls -CF'
+alias lh='ls -lh'
 
+alias tf='tail -100f '
 
-# export path
-#export http_proxy=http://127.0.0.1:8123
-#export https_proxy=http://127.0.0.1:8123
+echo "asdfasdfasdf" > ~/.env.log
+# same more ls aliases
+
+alias ssi='ssh -o ServerAliveInterval=60 -i'
 
 
 # Alias definitions.
@@ -36,3 +41,8 @@ if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliased
 fi
 
+# proxy for linux system
+#export http_proxy=http://127.0.0.1:8123
+#export https_proxy=http://127.0.0.1:8123
+
+alias ssu='ssi ~/.keys/ub._rsa ubuntu@t.bittx.net'

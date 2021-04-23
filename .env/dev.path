@@ -1,36 +1,39 @@
 ## Edited by Asin Liu
 ## Email: codezone@163.com
 
+DT=$HOME/.dev
+
 # java  maven gradle path
 
 # export JAVA_HOME=/usr/java/jdk11
-# export JAVA_HOME=~/.dev/jdk11
-# PATH=$JAVA_HOME/bin/:$PATH
-PATH=~/.dev/mvn/bin/:$PATH
-PATH=~/.dev/gradle/bin/:$PATH
+export JAVA_HOME=~/.dev/jdk11
+PATH=$JAVA_HOME/bin/:$PATH
 
+PATH=$DT/mvn/bin/:$PATH
+PATH=$DT/gradle/bin/:$PATH
 
 # flutter path
-PATH="$HOME/.dev/flutter/bin:$PATH"
-
-
-# node path
-PATH=$PATH:~/.dev/node/bin/
-## flutter docker
-
-# go path
-
-PATH="$PATH:$HOME/.dev/go/bin"
-
-# cargo path
-PATH="$PATH:$HOME/.cargo/bin"
-
-export PATH
-
-export SSLKEYLOGFILE=$PATH:~/.dev/node/bin
-
+PATH="$DT/flutter/bin:$PATH"
 # flutter cn mirror
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+## flutter docker
+
+# node path
+PATH=$PATH:$DT/node/bin
+export SSLKEYLOGFILE=$PATH:~/.dev/node/bin
+
+
+# go path
+PATH="$PATH:$DT/go/bin"
+
+# cargo path
+# PATH="$PATH:$HOME/.cargo/bin"
+
+# android sdk
+PATH=$HOME/Android/Sdk/platform-tools/:$PATH
+
+export PATH
+
 
 
