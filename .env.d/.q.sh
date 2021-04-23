@@ -26,7 +26,7 @@ alias lh='ls -lh'
 
 alias tf='tail -100f '
 
-echo "asdfasdfasdf" > ~/.env.log
+echo `date` > ~/.env.d/.env.log
 # same more ls aliases
 
 alias ssi='ssh -o ServerAliveInterval=60 -i'
@@ -46,3 +46,30 @@ fi
 #export https_proxy=http://127.0.0.1:8123
 
 alias ssu='ssi ~/.keys/ub._rsa ubuntu@t.bittx.net'
+
+skipSh=.q.sh
+envd=~/.env.d
+if [ -d $envd ]; then
+  # 此写法可以找出所有的文件，包括以.开头的隐藏文件    
+  for i in `find .env -type f -name "*.sh" -o -name "*.path" `; do
+    f=$i;
+    f=${f##*/}
+    if [ $f != $skipSh -a -r $i ]; then
+        . $i
+    else
+        echo "skip file "$i
+    fi
+  done
+  unset i
+
+
+
+  # 此写法不能找出以.开头的隐藏文件
+  for i in $envd/*.alias; do
+     if [ -r $i ]; then
+       . $i
+     fi
+  done
+  unset i  
+
+fi

@@ -1,5 +1,5 @@
 # check if has folder ~/.dev
-tgt=~/.dex
+tgt=~/.dev
 echo $tgt
 if [ ! -d $tgt ]; then
     mkdir -p $tgt
