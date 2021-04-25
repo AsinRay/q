@@ -2,11 +2,12 @@
 ## Email: codezone@163.com
 
 DT=$HOME/.dev
+#DT=/ddk
 
 # java  maven gradle path
 
 # export JAVA_HOME=/usr/java/jdk11
-export JAVA_HOME=~/.dev/jdk11
+export JAVA_HOME=$DT/jdk11
 PATH=$JAVA_HOME/bin/:$PATH
 
 PATH=$DT/mvn/bin/:$PATH

@@ -51,13 +51,13 @@ skipSh=.q.sh
 envd=~/.env.d
 if [ -d $envd ]; then
   # 此写法可以找出所有的文件，包括以.开头的隐藏文件    
-  for i in `find .env -type f -name "*.sh" -o -name "*.path" `; do
+  for i in `find $envd -type f -name "*.sh" -o -name "*.path" `; do
     f=$i;
     f=${f##*/}
     if [ $f != $skipSh -a -r $i ]; then
         . $i
-    else
-        echo "skip file "$i
+    #else
+        #echo "skip file "$i
     fi
   done
   unset i
