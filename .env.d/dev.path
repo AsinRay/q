@@ -2,6 +2,7 @@
 ## Email: codezone@163.com
 
 DT=$HOME/.dev
+#DT=/ddk
 
 # java  maven gradle path
 

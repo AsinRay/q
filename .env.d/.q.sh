@@ -31,6 +31,7 @@ if [ -d $envd ]; then
     f=${f##*/}
     if [ $f != $skipSh -a -r $i ]; then
         . $i
+
     else
         # echo "skip file "$i
         echo ""

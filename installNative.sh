@@ -10,9 +10,6 @@ else
     cp -r .env.d $HOME/
 fi
 
-
-
-
 # 
 if [ ! -f ~/.bashrc ]; then
     echo "default .bashrc not found. Gen a new one."
