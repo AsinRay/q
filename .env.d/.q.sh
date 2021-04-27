@@ -1,31 +1,6 @@
 # Edited by Asin Liu
 ## Email: codezone@163.com
 
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
-alias lla='ls -Al'
-alias l='ls -CF'
-alias lh='ls -lh'
-
-alias tf='tail -100f '
-
 echo `date` > ~/.env.d/.env.log
 # same more ls aliases
 
@@ -51,13 +26,14 @@ skipSh=.q.sh
 envd=~/.env.d
 if [ -d $envd ]; then
   # 此写法可以找出所有的文件，包括以.开头的隐藏文件    
-  for i in `find .env -type f -name "*.sh" -o -name "*.path" `; do
+  for i in `find $envd -type f -name "*.sh" -o -name "*.path" `; do
     f=$i;
     f=${f##*/}
     if [ $f != $skipSh -a -r $i ]; then
         . $i
     else
-        echo "skip file "$i
+        # echo "skip file "$i
+        echo ""
     fi
   done
   unset i
