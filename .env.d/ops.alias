@@ -22,6 +22,13 @@ alias oip='curl ipinfo.io/ip'
 alias ssi='ssh -o ServerAliveInterval=60 -i'
 alias tf='tail -100f '
 
+# 最大内存
+alias pstm='ps -eo pid,ppid,%mem,%cpu,cmd --sort=-%mem | head'
+alias psm='ps -eo pid,ppid,%mem,%cpu,comm --sort=-%mem | head'
+
+alias topmm='top -c -b -o +%MEM | head -n 20 | tail -15'
+alias topm='top -b -o +%MEM | head -n 20 | tail -15'
+
 # 解压
 alias untar='tar xvf '
 alias unjar='jar xvf '
