@@ -1,1 +1,1 @@
-echo ".e.sh started."
+# echo ".e.sh started."

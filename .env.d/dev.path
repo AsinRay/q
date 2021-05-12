@@ -15,14 +15,19 @@ PATH=$DT/gradle/bin/:$PATH
 
 # flutter path
 PATH="$DT/flutter/bin:$PATH"
-# flutter cn mirror
-export PUB_HOSTED_URL=https://pub.flutter-io.cn
-export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
-## flutter docker
+
+# flutter cn mirror, REF https://flutter.dev/community/china
+# export PUB_HOSTED_URL=https://pub.flutter-io.cn
+# export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+
+# 上海交大的mirror
+export FLUTTER_STORAGE_BASE_URL=https://mirrors.sjtug.sjtu.edu.cn/
+export PUB_HOSTED_URL=https://dart-pub.mirrors.sjtug.sjtu.edu.cn/
+## flutter doctor
 
 # node path
 PATH=$PATH:$DT/node/bin
-export SSLKEYLOGFILE=$PATH:~/.dev/node/bin
+export SSLKEYLOGFILE=$PATH:$DT/node/bin
 
 
 # go path
