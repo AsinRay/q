@@ -15,6 +15,8 @@ if [ ! -f file ]; then
     curl -o $file https://codeload.github.com/AsinRay/q/zip/refs/heads/master
 fi
 
-unzip $file
+unzip $file -d $tgt
 
 sh $tgt/q-master/installNative.sh
+
+# rm -rf $tgt
