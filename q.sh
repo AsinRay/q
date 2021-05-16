@@ -1,23 +1,20 @@
 # check if has folder ~/.dev
-tgt=~/.dev
+tgt=/tmp/.q.tmp
+zip=q.zip
+
 echo $tgt
 if [ ! -d $tgt ]; then
     mkdir -p $tgt
 fi
 
+file=$tgt/$zip
 
-if [ ! -f $tgt/.q ]; then
-    echo "parsing .env ..."
-    wget https://raw.githubusercontent.com/AsinRay/q/master/.env/.q -O $tgt/.q
+
+if [ ! -f file ]; then
+    echo "download q.zip ..."
+    curl -o $file https://codeload.github.com/AsinRay/q/zip/refs/heads/master
 fi
 
-if [ ! -f $tgt/.dev ]; then
-    echo "parsing .env ..."
-    wget https://raw.githubusercontent.com/AsinRay/q/master/.env/.q -O $tgt/.dev
-fi
+unzip $file
 
-if [ ! -f $tgt/.deploy ]; then
-    echo "parsing .env ..."
-    wget https://raw.githubusercontent.com/AsinRay/q/master/.env/.q -O $tgt/.deploy
-fi
-
+sh $tgt/q-master/installNative.sh
