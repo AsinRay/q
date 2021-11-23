@@ -1,0 +1,63 @@
+## SESSION
+
+alias t='tmux'
+
+# tmux new -s  <session-name> 
+alias tns='tmux new -s  '
+
+# ctrl + b s list all sessions
+# tmux  ls  
+alias tl='tmux  ls'
+
+# tmux attach -t  <session-name>
+alias tat='tmux attach -t  '
+
+# ctrl + b d 
+alias td='tmux detach'
+
+# tmux switch -t <session-name>
+alias tst='tmux switch -t '
+
+#  ctrl +b $  rename current session
+# tmux rename-session -t <old-session-name> <new-session-name>
+alias trt='tmux rename-session -t '
+
+# ctrl + d
+# tmux kill-session -t <session-name>
+alias tkt='tmux kill-session -t '
+
+## WINDOW
+
+# shutcut: ctrl + b “ 
+# tmux split-window
+alias tsw='tmux split-window'
+
+# shutcut: ctrl + b % 
+# tmux split-window -h
+alias tsh='tmux split-window -h '
+
+
+## SWAP PANE
+
+# tmux swap-pane -U
+alias tspu='tmux swap-pane -U'
+
+# tmux swap-pane -D
+alias tspd='tmux swap-pane -D'
+
+## CLOSE PANE
+# shutcut: ctrl + b x
+
+## PANE 
+# shutcut: ctrl + b z , One more time
+
+## ECHO DATE 
+# shutcut: ctrl +b t ,  Enter to exit.
+
+
+
+
+
+
+
+
